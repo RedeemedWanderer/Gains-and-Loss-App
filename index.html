@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Portfolio Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Connect your MetaMask wallet and track your cryptocurrency portfolio. Calculate potential gains with our portfolio projector.">
+</head>
+<body>
+    <header>
+        <h1>Crypto Portfolio Tracker</h1>
+        <button id="connectButton">Connect MetaMask Wallet</button>
+    </header>
+    <main>
+        <section>
+            <h2>Your Portfolio</h2>
+            <div id="portfolio" class="portfolio"></div>
+            <h2>Portfolio Value: $<span id="portfolioValue">0.00</span></h2>
+        </section>
+        <section>
+            <h2>Portfolio Projector</h2>
+            <div class="form-group">
+                <label for="crypto">Cryptocurrency:</label>
+                <select id="crypto">
+                    <option value="bitcoin">Bitcoin</option>
+                    <option value="ethereum">Ethereum</option>
+                    <option value="litecoin">Litecoin</option>
+                    <option value="dogecoin">Dogecoin</option>
+                    <option value="cardano">Cardano</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="currentAmount">Current Amount:</label>
+                <input type="number" id="currentAmount" step="any">
+            </div>
+            <div class="form-group">
+                <label for="targetPrice">Target Price ($):</label>
+                <input type="number" id="targetPrice" step="any">
+            </div>
+            <button onclick="calculateProjection()">Calculate</button>
+            <div id="projectionResult" class="result"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
